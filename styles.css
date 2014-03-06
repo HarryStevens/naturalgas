@@ -32,13 +32,12 @@ a:hover, a:active{
 	margin: auto;
 	position: absolute;
 	margin-top: 130px;
-	width: 1200px;
 }
 #bodyWrapper {
 	display: table;
 	margin: auto;
 	text-align:center;
-	width:1200px;
+	width:1000px;
 	position:relative;
 }
 .right {
