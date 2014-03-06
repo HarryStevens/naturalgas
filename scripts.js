@@ -26,7 +26,9 @@ function MgoogleReady(){
 //4. dataReady function will format the data, feed it into the Google visualization library, and display it on the page
 function MdataReady(GAS){
 	var dataArray = []; //empty array to populate with formatted data and feed to google viz
-	var rows = (GAS.rows);
+	var rows = (GAS.rows);//grabbing the rows object from the GAS fusion table data
+	
+	//This loop will format the data. This is necessary because the dates are formatted as strings and need to be read as actual dates
 	for(var i=0;i<rows.length;i++){
 		var currRow = rows[i];
 		
@@ -44,6 +46,17 @@ function MdataReady(GAS){
 		//Populate dataArray with formatted arrays
 		dataArray.push(currArray);
 		}
-		console.log(dataArray);
-
+	
+	//The below code uses the Google charts library
+	
+	//Feeds data to Google Viz library
+	var Gdata = new google.visualization.DataTable();
+	Gdata.addColumn('date', 'Date');
+	Gdata.addColumn('number', 'Price');
+	Gdata.addRows(dataArray);
+	
+	//Configures chart
+	
+	//Displays chart
+	
 }
