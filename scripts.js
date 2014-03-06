@@ -61,12 +61,13 @@ function MdataReady(GAS){
 		curveType : 'function',
 		height : 500,
 		width: 1000,
-		chartArea:{width:850,left:90},
+		chartArea:{width:850,height:380,left:100,right:10},
 		explorer : {
 			actions : ['dragToZoom', 'rightClickToReset'],
 			axis : 'horizontal',
 			maxZoomIn : .1
 		},
+		colors:['#2F4779'],
 		vAxis : {
 			title : 'Dollars per BTU',
 			ticks: [2,4,6,8,10,12,14],
