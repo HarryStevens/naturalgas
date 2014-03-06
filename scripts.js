@@ -56,7 +56,12 @@ function MdataReady(GAS){
 	Gdata.addRows(dataArray);
 	
 	//Configures chart
+	var Goptions = {
+		title: 'Company Performance'
+        };
 	
 	//Displays chart
+	var Gchart = new google.visualization.LineChart(document.getElementById('Gchart_div'));
+	Gchart.draw(Gdata, Goptions);
 	
 }
