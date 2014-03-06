@@ -20,7 +20,7 @@ function MpageReady(){
 
 //3. googleReady function will load the json from the fusion table and call dateReady function
 function MgoogleReady(){
-	$.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT+*+FROM+1LOmK0eFCAtFjzFW-kVx7dlbRcIJNSEC4wN7SD-da&key=AIzaSyB-QJux9WIJmey5IJYzPImNzg-xP1gpvU8",MdataReady,"json");
+	$.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT+*+FROM+1LOmK0eFCAtFjzFW-kVx7dlbRcIJNSEC4wN7SD-da+WHERE+DATE>1994&key=AIzaSyB-QJux9WIJmey5IJYzPImNzg-xP1gpvU8",MdataReady,"json");
 }
 
 //4. dataReady function will format the data, feed it into the Google visualization library, and display it on the page
