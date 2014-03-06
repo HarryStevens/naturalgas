@@ -57,8 +57,34 @@ function MdataReady(GAS){
 	
 	//Configures chart
 	var Goptions = {
-		title: 'Company Performance'
-        };
+		title : 'Select a date range to zoom in. Right click to zoom out.',
+		curveType : 'function',
+		height : 500,
+		width: 1000,
+		chartArea:{width:850,left:90},
+		explorer : {
+			actions : ['dragToZoom', 'rightClickToReset'],
+			axis : 'horizontal',
+			maxZoomIn : .1
+		},
+		vAxis : {
+			title : 'Dollars per BTU',
+			ticks: [2,4,6,8,10,12,14],
+			format:'$#',
+		},
+		hAxis : {
+			title : 'Date'
+		},
+		selectionMode : 'multiple',
+		legend : {
+			position : 'none'
+		},
+		backgroundColor : {
+			stroke : '#000',
+			strokeWidth : 4
+		},
+	}; 
+
 	
 	//Displays chart
 	var Gchart = new google.visualization.LineChart(document.getElementById('Gchart_div'));
