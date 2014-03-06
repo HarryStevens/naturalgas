@@ -25,5 +25,25 @@ function MgoogleReady(){
 
 //4. dataReady function will format the data, feed it into the Google visualization library, and display it on the page
 function MdataReady(GAS){
-	console.log(GAS);
+	var dataArray = []; //empty array to populate with formatted data and feed to google viz
+	var rows = (GAS.rows);
+	for(var i=0;i<rows.length;i++){
+		var currRow = rows[i];
+		
+		//Moment.js will convert the date string to an actual date
+		var currDate = currRow[0];
+		var momentDate = moment(currDate);
+		var finalDate = momentDate._d;
+		
+		//Grab the value from each row array
+		var finalVal = currRow[1];
+		
+		//Create a looping array with my finalDate and finalVal
+		var currArray = [finalDate,finalVal];
+		
+		//Populate dataArray with formatted arrays
+		dataArray.push(currArray);
+		}
+		console.log(dataArray);
+
 }
