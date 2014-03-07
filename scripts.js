@@ -70,7 +70,7 @@ function MdataReady(GAS){
 		colors:['#2F4779'],
 		vAxis : {
 			title : 'Dollars per BTU',
-			ticks: [2,4,6,8,10,12,14],
+			ticks: [0,2,4,6,8,10,12,14],
 			format:'$#',
 		},
 		hAxis : {
